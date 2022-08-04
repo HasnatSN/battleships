@@ -38,3 +38,15 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: 10;
+  grid-template-rows: 10;
+}
+
+.cell {
+  border: 1px solid red;
+  width: 10px;
+  height: 10px;
+}
