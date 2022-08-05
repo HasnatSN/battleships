@@ -9,12 +9,14 @@ class Gameboard {
     field.classList.add("grid");
     mainArea.appendChild(field);
 
-    for (let i = 0; i < this.size * this.size; i++) {
+    for (let i = 0; i < this.size ** 2; i++) {
       let cell = document.createElement("div");
       cell.classList.add("cell");
+      cell.setAttribute("data-index", i);
       field.appendChild(cell);
     }
   }
+
 }
 
 module.exports = { Gameboard };

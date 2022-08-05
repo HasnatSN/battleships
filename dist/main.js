@@ -16,7 +16,17 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_gameboard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/gameboard */ \"./src/modules/gameboard.js\");\n/* harmony import */ var _modules_gameboard__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_gameboard__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nlet gameboard = new _modules_gameboard__WEBPACK_IMPORTED_MODULE_0__.Gameboard();\r\n\r\ngameboard.createField();\r\ngameboard.createField();\r\n\n\n//# sourceURL=webpack://battleships/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_gameboard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/gameboard */ \"./src/modules/gameboard.js\");\n/* harmony import */ var _modules_gameboard__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_gameboard__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _modules_controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/controller */ \"./src/modules/controller.js\");\n/* harmony import */ var _modules_controller__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_controller__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\n\r\nlet gameboard = new _modules_gameboard__WEBPACK_IMPORTED_MODULE_0__.Gameboard();\r\n\r\ngameboard.createField();\r\ngameboard.createField();\r\n\r\n// placingState();\r\n\n\n//# sourceURL=webpack://battleships/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/controller.js":
+/*!***********************************!*\
+  !*** ./src/modules/controller.js ***!
+  \***********************************/
+/***/ ((module) => {
+
+eval("function placingState() {\r\n    \r\n}\r\n\r\nmodule.exports = placingState;\r\n\n\n//# sourceURL=webpack://battleships/./src/modules/controller.js?");
 
 /***/ }),
 
@@ -26,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
   \**********************************/
 /***/ ((module) => {
 
-eval("class Gameboard {\r\n  constructor() {\r\n    this.size = 10; // 10x10 to make the grid\r\n  }\r\n\r\n  createField() {\r\n    const mainArea = document.querySelector(\"main\");\r\n    const field = document.createElement(\"div\");\r\n    field.classList.add(\"grid\");\r\n    mainArea.appendChild(field);\r\n\r\n    for (let i = 0; i < this.size * this.size; i++) {\r\n      let cell = document.createElement(\"div\");\r\n      cell.classList.add(\"cell\");\r\n      field.appendChild(cell);\r\n    }\r\n  }\r\n}\r\n\r\nmodule.exports = { Gameboard };\r\n\n\n//# sourceURL=webpack://battleships/./src/modules/gameboard.js?");
+eval("class Gameboard {\r\n  constructor() {\r\n    this.size = 10; // 10x10 to make the grid\r\n  }\r\n\r\n  createField() {\r\n    const mainArea = document.querySelector(\"main\");\r\n    const field = document.createElement(\"div\");\r\n    field.classList.add(\"grid\");\r\n    mainArea.appendChild(field);\r\n\r\n    for (let i = 0; i < this.size ** 2; i++) {\r\n      let cell = document.createElement(\"div\");\r\n      cell.classList.add(\"cell\");\r\n      cell.setAttribute(\"data-index\", i);\r\n      field.appendChild(cell);\r\n    }\r\n  }\r\n\r\n}\r\n\r\nmodule.exports = { Gameboard };\r\n\n\n//# sourceURL=webpack://battleships/./src/modules/gameboard.js?");
 
 /***/ })
 

@@ -56,3 +56,18 @@ h1 {
   width: 50px;
   height: 50px;
 }
+
+.cell:hover {
+  background-color: lightcoral;
+}
+
+@media (max-width: 920px) {
+  .grid {
+    
+  }
+
+  .cell {
+    width: 10px;
+    height: 10px;
+  }
+}
