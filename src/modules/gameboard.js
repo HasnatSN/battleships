@@ -5,16 +5,16 @@ class Gameboard {
 
   createField() {
     const mainArea = document.querySelector("main");
+    const field = document.createElement("div");
+    field.classList.add("grid");
+    mainArea.appendChild(field);
 
-    for (let i = 0; i < this.size; i++) {
+    for (let i = 0; i < this.size * this.size; i++) {
       let cell = document.createElement("div");
       cell.classList.add("cell");
-      mainArea.appendChild(cell);
+      field.appendChild(cell);
     }
   }
 }
 
-
-
-module.exports = Gameboard;
-export {Gameboard}
+module.exports = { Gameboard };
